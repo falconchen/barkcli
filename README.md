@@ -5,8 +5,10 @@
 
 ## 安装
 
+从[realese页下载](https://github.com/falconchen/barkcli/releases/)：
+
 ```bash
-pip install barkcli.tar.gz
+pip install barkcli-.*.tar.gz
 ```
 
 或从源码目录运行：
@@ -56,3 +58,12 @@ bark --title "Hello" --content "World" \
 - `category`: Bark 分类（用于分组显示）
 - `ringtone`: 铃声名称（如：`alarm.caf`, `bell.caf`）
 
+## 打包成压缩文件
+在修正后的 barkcli 项目目录下执行：
+```
+python setup.py sdist
+```
+会在 `dist/` 目录生成一个新的 `barkcli-x.x.x.tar.gz` 文件
+
+## 重新安装到系统
+pip install --force-reinstall dist/barkcli-*.tar.gz
