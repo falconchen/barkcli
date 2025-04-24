@@ -1,0 +1,32 @@
+# ========================
+# Git attributes for barkcli
+# ========================
+
+# 自动识别文本文件并使用合适的换行符
+* text=auto
+
+# 强制使用 LF 换行符（推荐用于跨平台 Python 项目）
+*.py text eol=lf
+*.sh text eol=lf
+
+# 将图片和音频等二进制文件标记为 binary，避免 diff 和合并
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mp3 binary
+*.wav binary
+
+# 文档不参与 git archive 导出（比如发布源码包时忽略）
+README.md export-ignore
+CHANGELOG.md export-ignore
+
+# 构建目录和 egg-info 忽略导出
+dist/* export-ignore
+build/* export-ignore
+*.egg-info/* export-ignore
+
+# GitHub linguist 设置
+*.py linguist-language=Python
+docs/* linguist-documentation
