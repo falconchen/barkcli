@@ -1,1 +1,5 @@
 .DS_Store
+# 忽略构建相关目录
+build/
+dist/
+*.egg-info/

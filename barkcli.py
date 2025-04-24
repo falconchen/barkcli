@@ -4,6 +4,9 @@ import os
 import sys
 from BarkNotificator import BarkNotificator
 
+import requests
+requests.Response.is_success = property(lambda self: self.ok)
+
 def main():
     parser = argparse.ArgumentParser(description="Send push notification via Bark.")
 
