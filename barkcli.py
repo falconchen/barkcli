@@ -28,7 +28,7 @@ def main():
     args = parser.parse_args()
 
     title = args.title_opt or args.title
-    content = args.content_opt or args.content
+    content = args.content_opt or args.content or ""
     icon_url = args.icon_url_opt or args.icon_url or ""
     target_url = args.target_url_opt or args.target_url or ""
     category = args.category_opt or args.category or ""
@@ -39,8 +39,8 @@ def main():
         print("Error: You must provide a device token via --token or BARK_TOKEN env var.")
         sys.exit(1)
 
-    if not title or not content:
-        print("Error: Title and content are required.")
+    if not title:
+        print("Error: Title  are required.")
         sys.exit(1)
 
     bark = BarkNotificator(device_token=token)

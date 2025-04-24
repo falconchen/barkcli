@@ -5,7 +5,11 @@
 
 ## 安装
 
-从[realese页下载](https://github.com/falconchen/barkcli/releases/)：
+``` bash
+pip install --upgrade barkcli
+```
+
+或从[realese页下载](https://github.com/falconchen/barkcli/releases/)：
 
 ```bash
 pip install barkcli-.*.tar.gz
@@ -19,15 +23,26 @@ pip install .
 
 ## 使用方法
 
-### 设置 Token
+### 获取 Device Token 
 
-你可以通过环境变量 `BARK_TOKEN` 设置设备 token：
+在 `Bark` APP的设置页获取：
+![](DeviceToken.png)
+
+
+### 设置 Device Token
+
+通过环境变量 `BARK_TOKEN` 设置设备 token：
+
 
 ```bash
 export BARK_TOKEN=your_device_token
 ```
 
 也可以通过 `--token` 参数传入。
+
+``` bash
+bark hello world --token "Your-DeviceToken"
+```
 
 ### 命令格式
 
